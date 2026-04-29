@@ -1,0 +1,272 @@
+[
+  {
+    "numero": 1,
+    "nombre": "El Gallo",
+    "frase": "El que le cantó a San Pedro no le volverá a cantar."
+  },
+  {
+    "numero": 2,
+    "nombre": "El Diablito",
+    "frase": "Pórtate bien cuatito, sino te lleva el coloradito."
+  },
+  {
+    "numero": 3,
+    "nombre": "La Dama",
+    "frase": "La que se pasea en el Paseo de la Reforma."
+  },
+  {
+    "numero": 4,
+    "nombre": "El Catrín",
+    "frase": "Don Ferruco en la Alameda, su bastón quería tirar."
+  },
+  {
+    "numero": 5,
+    "nombre": "El Paraguas",
+    "frase": "Para el sol y para el agua."
+  },
+  {
+    "numero": 6,
+    "nombre": "La Sirena",
+    "frase": "Con los cantos de sirena no te vayas a marear."
+  },
+  {
+    "numero": 7,
+    "nombre": "La Escalera",
+    "frase": "Súbeme paso a pasito, no quieras pegar brinquitos."
+  },
+  {
+    "numero": 8,
+    "nombre": "La Botella",
+    "frase": "El que con ella se olvida, con ella se consuela."
+  },
+  {
+    "numero": 9,
+    "nombre": "El Barril",
+    "frase": "Uno que puse y dos que saqué, parejo quedé."
+  },
+  {
+    "numero": 10,
+    "nombre": "El Árbol",
+    "frase": "El que a buen árbol se arrima, buena sombra le cobija."
+  },
+  {
+    "numero": 11,
+    "nombre": "El Melón",
+    "frase": "El que parte y reparte se queda con la mejor parte."
+  },
+  {
+    "numero": 12,
+    "nombre": "El Valiente",
+    "frase": "Por aquí pasó un valiente, que no le temía a nada."
+  },
+  {
+    "numero": 13,
+    "nombre": "El Gorrito",
+    "frase": "Ponme el gorrito, que no se me vaya la de buenas."
+  },
+  {
+    "numero": 14,
+    "nombre": "La Muerte",
+    "frase": "La muerte tilica y flaca."
+  },
+  {
+    "numero": 15,
+    "nombre": "La Pera",
+    "frase": "El que espera, desespera."
+  },
+  {
+    "numero": 16,
+    "nombre": "La Bandera",
+    "frase": "Verde, blanco y colorado, la bandera del soldado."
+  },
+  {
+    "numero": 17,
+    "nombre": "El Bandolón",
+    "frase": "Tocando el bandolón llegará tu amor."
+  },
+  {
+    "numero": 18,
+    "nombre": "El Violoncello",
+    "frase": "El amor y el violoncello se tocan despacito."
+  },
+  {
+    "numero": 19,
+    "nombre": "La Garza",
+    "frase": "Tan presumida que se las pela."
+  },
+  {
+    "numero": 20,
+    "nombre": "El Pájaro",
+    "frase": "El pájaro en la mano es mejor que cien volando."
+  },
+  {
+    "numero": 21,
+    "nombre": "La Mano",
+    "frase": "La mano de un criminal."
+  },
+  {
+    "numero": 22,
+    "nombre": "La Bota",
+    "frase": "Una bota bien puesta, un corazón destrozado."
+  },
+  {
+    "numero": 23,
+    "nombre": "La Luna",
+    "frase": "El farol de los enamorados."
+  },
+  {
+    "numero": 24,
+    "nombre": "El Cotorro",
+    "frase": "El que tiene boca se equivoca."
+  },
+  {
+    "numero": 25,
+    "nombre": "El Borracho",
+    "frase": "Mañana será otro día."
+  },
+  {
+    "numero": 26,
+    "nombre": "El Negrito",
+    "frase": "El que se fue a la villa, perdió su silla."
+  },
+  {
+    "numero": 27,
+    "nombre": "El Corazón",
+    "frase": "No me extrañes corazón, que regreso en el camión."
+  },
+  {
+    "numero": 28,
+    "nombre": "La Sandía",
+    "frase": "La barriga que Juan cargaba."
+  },
+  {
+    "numero": 29,
+    "nombre": "El Tambor",
+    "frase": "El que no baile y brinque, que le den con un tamborilazos."
+  },
+  {
+    "numero": 30,
+    "nombre": "El Camarón",
+    "frase": "Camarón que se duerme, se lo lleva la corriente."
+  },
+  {
+    "numero": 31,
+    "nombre": "Las Jaras",
+    "frase": "Aquí está la madre de los pollitos."
+  },
+  {
+    "numero": 32,
+    "nombre": "El Músico",
+    "frase": "La música amansa a las fieras."
+  },
+  {
+    "numero": 33,
+    "nombre": "La Araña",
+    "frase": "Arañita, arañita, ¿qué haces en el rinconcito?"
+  },
+  {
+    "numero": 34,
+    "nombre": "El Soldado",
+    "frase": "Uno, dos, tres, el soldado de pie es."
+  },
+  {
+    "numero": 35,
+    "nombre": "La Estrella",
+    "frase": "La guía de los marineros."
+  },
+  {
+    "numero": 36,
+    "nombre": "El Cazo",
+    "frase": "Le dijo el cazo a la olla, tiznadita eres mi polla."
+  },
+  {
+    "numero": 37,
+    "nombre": "El Mundo",
+    "frase": "Todo el mundo es para ti."
+  },
+  {
+    "numero": 38,
+    "nombre": "El Apache",
+    "frase": "Con el ojo en la mirilla, ya tiene el apache en la silla."
+  },
+  {
+    "numero": 39,
+    "nombre": "El Nopal",
+    "frase": "Al nopal lo van a ver nomás cuando tiene tunas."
+  },
+  {
+    "numero": 40,
+    "nombre": "El Alacrán",
+    "frase": "El que con alacranes se acuesta, amanece picado."
+  },
+  {
+    "numero": 41,
+    "nombre": "La Rosa",
+    "frase": "Rosita, ¿dónde quedó tu color?"
+  },
+  {
+    "numero": 42,
+    "nombre": "La Calavera",
+    "frase": "Al cabo que al final todos llegamos a ser calaveras."
+  },
+  {
+    "numero": 43,
+    "nombre": "El Cantarito",
+    "frase": "Tanto va el cántaro al agua hasta que se rompe."
+  },
+  {
+    "numero": 44,
+    "nombre": "El Venado",
+    "frase": "Saltó el venado con sus cuernos bien puestos."
+  },
+  {
+    "numero": 45,
+    "nombre": "El Sol",
+    "frase": "La luz que alumbra y ciega a todo el mundo."
+  },
+  {
+    "numero": 46,
+    "nombre": "La Corona",
+    "frase": "El que por su rey muere, en el cielo vive."
+  },
+  {
+    "numero": 47,
+    "nombre": "La Chalupa",
+    "frase": "Rema que rema Lupita, en su chalupita."
+  },
+  {
+    "numero": 48,
+    "nombre": "El Pino",
+    "frase": "Frío, solitario y perezoso."
+  },
+  {
+    "numero": 49,
+    "nombre": "El Pescado",
+    "frase": "El que pez quiera atrapar, mojarse debe."
+  },
+  {
+    "numero": 50,
+    "nombre": "La Palma",
+    "frase": "La mano de Dios."
+  },
+  {
+    "numero": 51,
+    "nombre": "La Maceta",
+    "frase": "Le cayó el veinte."
+  },
+  {
+    "numero": 52,
+    "nombre": "El Arpa",
+    "frase": "El que con música vive, de música muere."
+  },
+  {
+    "numero": 53,
+    "nombre": "La Rana",
+    "frase": "Al que no habla, Dios no lo oye."
+  },
+  {
+    "numero": 54,
+    "nombre": "El Cohetero",
+    "frase": "Cohetero que al cielo sube, en el cielo revienta."
+  }
+]
