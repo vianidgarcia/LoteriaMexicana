@@ -69,6 +69,10 @@ namespace LoteriaMexicanaModelos
                                 MensajeUnirse mensajeUnirse = JsonSerializer.Deserialize<MensajeUnirse>(mensajeJson, opciones);
                                 OnJugadorConectado?.Invoke(mensajeUnirse.Usuario);
                                 break;
+                            case "IniciarPartida":
+                                MensajeIniciarPartida mensajeIniciar = JsonSerializer.Deserialize<MensajeIniciarPartida>(mensajeJson, opciones);
+                                OnPartidaIniciada?.Invoke(mensajeIniciar);
+                                break;
 
                         }
                     }
@@ -95,5 +99,6 @@ namespace LoteriaMexicanaModelos
         public event Action<string> OnJugadorDesconectado;
         public event Action<MensajeCarta> OnCartaSacada;
         public event Action<MensajeGanador> OnGanador;
+        public event Action<MensajeIniciarPartida> OnPartidaIniciada;
     }
 }

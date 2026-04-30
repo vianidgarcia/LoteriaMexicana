@@ -1,4 +1,5 @@
 ﻿using LoteriaMexicanaModelos;
+using LoteriaMexicanaModelos.CondicionesParaGanar;
 
 List<Carta> cartas = CatalogoCartas.CargarCatalogo();
 

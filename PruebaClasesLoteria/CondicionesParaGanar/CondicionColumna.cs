@@ -4,29 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LoteriaMexicanaModelos
+namespace LoteriaMexicanaModelos.CondicionesParaGanar
 {
-    public class CondicionLinea : ICondicionGanar
+    public class CondicionColumna : ICondicionGanar
     {
-        public string Nombre => "Línea";
+        public string Nombre => "Columna";
         public bool Verificar(Tabla tabla)
         {
             for (int i = 0; i < 4; i++)
             {
-                bool lineaCompleta = true;
+                bool columnaCompleta = true;
                 for (int j = 0; j < 4; j++)
                 {
-                    if (!tabla.ObtenerCasilla(i, j).Marcada)
+                    if (!tabla.ObtenerCasilla(j, i).Marcada)
                     {
-                        lineaCompleta = false;
+                        columnaCompleta = false;
                         break;
                     }
                 }
-                if (lineaCompleta)
+                if (columnaCompleta)
+                {
                     return true;
+                }
             }
             return false;
         }
-    
     }
 }

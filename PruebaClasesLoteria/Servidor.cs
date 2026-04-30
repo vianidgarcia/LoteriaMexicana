@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LoteriaMexicanaModelos.CondicionesParaGanar;
+using LoteriaMexicanaModelos.Mensajes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -6,19 +8,20 @@ using System.Net.Sockets;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using LoteriaMexicanaModelos.Mensajes;
 
 namespace LoteriaMexicanaModelos
 {
     public class Servidor
     {
+        Partida partida = new Partida();
         TcpListener servidor;
         List<StreamWriter> clientes = new List<StreamWriter>();
-        Partida partida;
 
-        public Servidor()
+        public Servidor(List<ICondicionGanar> condiciones)
         {
             partida = new Partida();
+            foreach (var condicion in condiciones)
+                partida.AgregarCondicionGanar(condicion);
         }
 
         public void Iniciar(int puerto)
@@ -33,18 +36,27 @@ namespace LoteriaMexicanaModelos
                     NetworkStream stream = cliente.GetStream();
                     StreamWriter escritor = new StreamWriter(stream);
                     StreamReader lector = new StreamReader(stream);
+                    clientes.Add(escritor);
                     ThreadPool.QueueUserWorkItem(_ =>
                     {
-                        while (true)
+                        try
                         {
-                            string mensaje = lector.ReadLine();
-                            if (mensaje == null)
+                            while (true)
                             {
-                                clientes.Remove(escritor);
-                                OnJugadorDesconectado?.Invoke("Un jugador se ha desconectado.");
-                                break; // sale del while, no return
+                                string mensaje = lector.ReadLine();
+                                if (mensaje == null)
+                                {
+                                    clientes.Remove(escritor);
+                                    OnJugadorDesconectado?.Invoke("Un jugador se ha desconectado.");
+                                    break;
+                                }
+                                ProcesarMensaje(mensaje);
                             }
-                            ProcesarMensaje(mensaje);
+                        }
+                        catch
+                        {
+                            clientes.Remove(escritor);
+                            OnJugadorDesconectado?.Invoke("Un jugador se ha desconectado.");
                         }
                     });
                 }
@@ -75,6 +87,7 @@ namespace LoteriaMexicanaModelos
                 case "Carta":
                     MensajeCarta mensajeCarta = JsonSerializer.Deserialize<MensajeCarta>(mensaje, opciones);
                     OnCartaSacada?.Invoke(mensajeCarta);
+                    EnviarATodos(mensaje);
                     break;
                 case "Chat":
                     MensajeChat mensajeChat = JsonSerializer.Deserialize<MensajeChat>(mensaje, opciones);
@@ -84,10 +97,12 @@ namespace LoteriaMexicanaModelos
                 case "Ganador":
                     MensajeGanador mensajeGanador = JsonSerializer.Deserialize<MensajeGanador>(mensaje, opciones);
                     OnGanador?.Invoke(mensajeGanador);
+                    EnviarATodos(mensaje);
                     break;
                 case "Unirse":
                     MensajeUnirse mensajeUnirse = JsonSerializer.Deserialize<MensajeUnirse>(mensaje, opciones);
                     OnJugadorConectado?.Invoke(mensajeUnirse.Usuario);
+                    EnviarATodos(mensaje);
                     break;
             }
         }

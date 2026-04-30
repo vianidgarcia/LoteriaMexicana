@@ -18,5 +18,15 @@ namespace LoteriaMexicana.UI.Controles
             InitializeComponent();
             this.frmPrincipal = frmPrincipal;
         }
+
+        private void btnCrearPartida_Click(object sender, EventArgs e)
+        {
+            frmPrincipal.MostrarControl(new CrearPartidaControl(frmPrincipal));
+        }
+
+        private void btnUnirsePartida_Click(object sender, EventArgs e)
+        {
+            frmPrincipal.MostrarControl(new UnirsePartidaControl(frmPrincipal));
+        }
     }
 }

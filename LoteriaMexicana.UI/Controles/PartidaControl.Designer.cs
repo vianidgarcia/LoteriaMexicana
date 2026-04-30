@@ -1,6 +1,6 @@
 ﻿namespace LoteriaMexicana.UI.Controles
 {
-    partial class MenuControl
+    partial class PartidaControl
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -28,44 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnCrearPartida = new Button();
-            btnUnirsePartida = new Button();
+            label1 = new Label();
+            lblpruebacliente = new Label();
             SuspendLayout();
             // 
-            // btnCrearPartida
+            // label1
             // 
-            btnCrearPartida.Location = new Point(90, 82);
-            btnCrearPartida.Name = "btnCrearPartida";
-            btnCrearPartida.Size = new Size(131, 23);
-            btnCrearPartida.TabIndex = 0;
-            btnCrearPartida.Text = "Crear Partida";
-            btnCrearPartida.UseVisualStyleBackColor = true;
-            btnCrearPartida.Click += btnCrearPartida_Click;
+            label1.AutoSize = true;
+            label1.Location = new Point(68, 74);
+            label1.Name = "label1";
+            label1.Size = new Size(136, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Soy un label de prueba:3";
             // 
-            // btnUnirsePartida
+            // lblpruebacliente
             // 
-            btnUnirsePartida.Location = new Point(90, 133);
-            btnUnirsePartida.Name = "btnUnirsePartida";
-            btnUnirsePartida.Size = new Size(131, 23);
-            btnUnirsePartida.TabIndex = 1;
-            btnUnirsePartida.Text = "Unirse a Partida";
-            btnUnirsePartida.UseVisualStyleBackColor = true;
-            btnUnirsePartida.Click += btnUnirsePartida_Click;
+            lblpruebacliente.AutoSize = true;
+            lblpruebacliente.Location = new Point(67, 126);
+            lblpruebacliente.Name = "lblpruebacliente";
+            lblpruebacliente.Size = new Size(136, 15);
+            lblpruebacliente.TabIndex = 1;
+            lblpruebacliente.Text = "Soy un label de prueba:3";
             // 
-            // MenuControl
+            // PartidaControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(btnUnirsePartida);
-            Controls.Add(btnCrearPartida);
-            Name = "MenuControl";
-            Size = new Size(341, 212);
+            Controls.Add(lblpruebacliente);
+            Controls.Add(label1);
+            Name = "PartidaControl";
+            Size = new Size(271, 266);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Button btnCrearPartida;
-        private Button btnUnirsePartida;
+        private Label label1;
+        private Label lblpruebacliente;
     }
 }
