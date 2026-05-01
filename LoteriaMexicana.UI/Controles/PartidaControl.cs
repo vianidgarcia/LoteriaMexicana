@@ -21,7 +21,7 @@ namespace LoteriaMexicana.UI.Controles
             InitializeComponent();
             this.servidor = servidor;
             this.frmPrincipal = frmPrincipal;
-            label1.Visible = false;
+            lblFrase.Visible = false;
         }
 
         public PartidaControl(Cliente cliente, FrmPrincipal frmPrincipal)

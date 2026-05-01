@@ -28,43 +28,88 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            lblFrase = new Label();
             lblpruebacliente = new Label();
+            pbxCartaCantada = new PictureBox();
+            btnLoteria = new Button();
+            txtChat = new TextBox();
+            tcJugador = new TablaControl();
+            ((System.ComponentModel.ISupportInitialize)pbxCartaCantada).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // lblFrase
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(68, 74);
-            label1.Name = "label1";
-            label1.Size = new Size(136, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Soy un label de prueba:3";
+            lblFrase.AutoSize = true;
+            lblFrase.Location = new Point(157, 143);
+            lblFrase.Name = "lblFrase";
+            lblFrase.Size = new Size(136, 15);
+            lblFrase.TabIndex = 0;
+            lblFrase.Text = "Soy un label de prueba:3";
             // 
             // lblpruebacliente
             // 
             lblpruebacliente.AutoSize = true;
-            lblpruebacliente.Location = new Point(67, 126);
+            lblpruebacliente.Location = new Point(369, 20);
             lblpruebacliente.Name = "lblpruebacliente";
             lblpruebacliente.Size = new Size(136, 15);
             lblpruebacliente.TabIndex = 1;
             lblpruebacliente.Text = "Soy un label de prueba:3";
             // 
+            // pbxCartaCantada
+            // 
+            pbxCartaCantada.Location = new Point(181, 20);
+            pbxCartaCantada.Name = "pbxCartaCantada";
+            pbxCartaCantada.Size = new Size(86, 110);
+            pbxCartaCantada.TabIndex = 2;
+            pbxCartaCantada.TabStop = false;
+            // 
+            // btnLoteria
+            // 
+            btnLoteria.Location = new Point(192, 488);
+            btnLoteria.Name = "btnLoteria";
+            btnLoteria.Size = new Size(75, 23);
+            btnLoteria.TabIndex = 3;
+            btnLoteria.Text = "button1";
+            btnLoteria.UseVisualStyleBackColor = true;
+            // 
+            // txtChat
+            // 
+            txtChat.Location = new Point(414, 374);
+            txtChat.Name = "txtChat";
+            txtChat.Size = new Size(100, 23);
+            txtChat.TabIndex = 4;
+            // 
+            // tcJugador
+            // 
+            tcJugador.Location = new Point(122, 172);
+            tcJugador.Name = "tcJugador";
+            tcJugador.Size = new Size(234, 287);
+            tcJugador.TabIndex = 5;
+            // 
             // PartidaControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(tcJugador);
+            Controls.Add(txtChat);
+            Controls.Add(btnLoteria);
+            Controls.Add(pbxCartaCantada);
             Controls.Add(lblpruebacliente);
-            Controls.Add(label1);
+            Controls.Add(lblFrase);
             Name = "PartidaControl";
-            Size = new Size(271, 266);
+            Size = new Size(571, 526);
+            ((System.ComponentModel.ISupportInitialize)pbxCartaCantada).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
+        private Label lblFrase;
         private Label lblpruebacliente;
+        private PictureBox pbxCartaCantada;
+        private Button btnLoteria;
+        private TextBox txtChat;
+        private TablaControl tcJugador;
     }
 }
