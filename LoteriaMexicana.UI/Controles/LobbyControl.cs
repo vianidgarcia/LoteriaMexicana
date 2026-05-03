@@ -52,8 +52,14 @@ namespace LoteriaMexicana.UI.Controles
                 Invoke(new Action<MensajeIniciarPartida>(PartidaIniciada), mensaje);
                 return;
             }
-
-            frmPrincipal.MostrarControl(new PartidaControl(cliente, frmPrincipal));
+            try
+            {
+                frmPrincipal.MostrarControl(new PartidaControl(cliente, frmPrincipal));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void JugadorConectado(string nombre)
@@ -69,10 +75,8 @@ namespace LoteriaMexicana.UI.Controles
 
         private void btnComenzarPartida_Click(object sender, EventArgs e)
         {
-                MensajeIniciarPartida mensaje = new MensajeIniciarPartida();
-                string json = JsonSerializer.Serialize(mensaje);
-                servidor.EnviarATodos(json);
-                frmPrincipal.MostrarControl(new PartidaControl(servidor, frmPrincipal));
+                servidor.IniciarJuego();
+            frmPrincipal.MostrarControl(new PartidaControl(servidor, frmPrincipal));
         }
     }
 }

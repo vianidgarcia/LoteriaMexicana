@@ -11,8 +11,9 @@ namespace LoteriaMexicanaModelos.Mensajes
         public string Nombre { get; set; }
         public string Frase { get; set; }
         public int Numero { get; set; }
-    
-            public MensajeCarta()
+        
+        public string RutaImagen { get; set; } = string.Empty;
+        public MensajeCarta()
             {
                 Tipo = "Carta";
         }

@@ -22,24 +22,10 @@ namespace LoteriaMexicana.UI.Controles
             pbxFicha.Location = new Point(50, 50);
             pbxFicha.Visible = false;
 
-            pbxCarta.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbxCarta.SizeMode = PictureBoxSizeMode.Zoom;
             _casilla = casilla;
-            lblNombre.Text = _casilla.Carta.Nombre;
 
-            string rutaCarpeta = Path.Combine(Application.StartupPath, "Resources");
-            string rutaCompleta = Path.Combine(rutaCarpeta, _casilla.Carta.RutaImagen);
-
-            try
-            {
-                if (File.Exists(rutaCompleta))
-                {
-                    pbxCarta.Image = Image.FromFile(rutaCompleta);
-                }
-            }
-            catch (Exception)
-            {
-                pbxCarta.Image = null;
-            }
+            pbxFicha.Image = Image.FromFile(Path.Combine(Application.StartupPath, "Resources", "fichaDeBotella.png"));
             AsignarFoto();
         }
 

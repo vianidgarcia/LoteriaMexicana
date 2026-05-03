@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LoteriaMexicanaModelos.Mensajes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,22 @@ namespace LoteriaMexicanaModelos
             NombreJugador = nombreJugador;
             Nombre = nombre;
             casillas = new Casilla[4, 4];
+        }
+
+        public Tabla(List<CartaEstado> cartasEstado)
+        {
+            casillas = new Casilla[4, 4];
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    CartaEstado estado = cartasEstado[i * 4 + j];
+                    casillas[i, j] = new Casilla(new Carta { Numero = estado.NumeroCarta })
+                    {
+                        Marcada = estado.Marcada
+                    };
+                }
+            }
         }
 
         public void GenerarAleatoria(List<Carta> cartas)
@@ -75,6 +92,24 @@ namespace LoteriaMexicanaModelos
 
             casillas[fila, columna].Marcada = true;
         }
+
+       public List<CartaEstado> ObtenerEstadoMarcado()
+        {
+            List<CartaEstado> estadoMarcado = new List<CartaEstado>();
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Casilla casilla = ObtenerCasilla(i, j);
+                    if (casilla != null)
+                    {
+                        estadoMarcado.Add(new CartaEstado { NumeroCarta = casilla.Carta.Numero, Marcada = casilla.Marcada });
+                    }
+                }
+            }
+            return estadoMarcado;
+        }
+
 
 
 

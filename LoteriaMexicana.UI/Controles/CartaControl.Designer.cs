@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             pbxCarta = new PictureBox();
-            lblNombre = new Label();
             pbxFicha = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pbxCarta).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbxFicha).BeginInit();
@@ -37,27 +36,21 @@
             // 
             // pbxCarta
             // 
-            pbxCarta.Location = new Point(14, 14);
+            pbxCarta.Location = new Point(0, 0);
+            pbxCarta.Margin = new Padding(0);
             pbxCarta.Name = "pbxCarta";
-            pbxCarta.Size = new Size(233, 303);
+            pbxCarta.Size = new Size(106, 169);
+            pbxCarta.SizeMode = PictureBoxSizeMode.Zoom;
             pbxCarta.TabIndex = 0;
             pbxCarta.TabStop = false;
             pbxCarta.Click += pbxCarta_Click;
             // 
-            // lblNombre
-            // 
-            lblNombre.AutoSize = true;
-            lblNombre.Location = new Point(114, 274);
-            lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(38, 15);
-            lblNombre.TabIndex = 1;
-            lblNombre.Text = "label1";
-            // 
             // pbxFicha
             // 
-            pbxFicha.Location = new Point(87, 125);
+            pbxFicha.Location = new Point(27, 58);
             pbxFicha.Name = "pbxFicha";
-            pbxFicha.Size = new Size(87, 82);
+            pbxFicha.Size = new Size(52, 51);
+            pbxFicha.SizeMode = PictureBoxSizeMode.Zoom;
             pbxFicha.TabIndex = 2;
             pbxFicha.TabStop = false;
             // 
@@ -66,20 +59,17 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(pbxFicha);
-            Controls.Add(lblNombre);
             Controls.Add(pbxCarta);
             Name = "CartaControl";
-            Size = new Size(263, 331);
+            Size = new Size(106, 169);
             ((System.ComponentModel.ISupportInitialize)pbxCarta).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbxFicha).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private PictureBox pbxCarta;
-        private Label lblNombre;
         private PictureBox pbxFicha;
     }
 }

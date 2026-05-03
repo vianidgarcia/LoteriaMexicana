@@ -57,25 +57,20 @@ namespace LoteriaMexicanaModelos
             if (Estado != EstadoPartida.EnCurso)
                 throw new Exception("La partida no está en curso.");
             if (Mazo.EstaVacio)
-                throw new Exception("No hay más cartas para sacar.");
+                throw new Exception("La partida no está en curso.");
             Carta carta = Mazo.SacarCarta();
             return carta;
         }
-
-        public Jugador VerificarGanadores()
+        public bool FueCantada(int numeroCarta)
         {
-            foreach (var jugador in Jugadores)
+            return Mazo.FueCantada(numeroCarta);
+        }
+        public ICondicionGanar VerificarPosibleGanador(Tabla tabla)
+        {
+            foreach (var condicion in CondicionesGanar)
             {
-                foreach (var condicion in CondicionesGanar)
-                {
-                    foreach (var tabla in jugador.Tablas)
-                    {
-                        if (condicion.Verificar(tabla))
-                        {
-                           return jugador;
-                        }
-                    }
-                }
+                if (condicion.Verificar(tabla))
+                    return condicion;
             }
             return null;
         }

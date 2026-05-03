@@ -39,5 +39,10 @@ namespace LoteriaMexicanaModelos
             cartasUsadas.Add(c);
             return c;
         }
+
+        public bool FueCantada(int numeroCarta)
+        {
+            return cartasUsadas.Any(c => c.Numero == numeroCarta);
+        }
     }
 }

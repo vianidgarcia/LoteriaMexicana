@@ -34,18 +34,19 @@
             // tlpTabla
             // 
             tlpTabla.ColumnCount = 4;
-            tlpTabla.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 51.7647057F));
-            tlpTabla.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 48.2352943F));
-            tlpTabla.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 88F));
-            tlpTabla.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 73F));
-            tlpTabla.Location = new Point(3, 3);
+            tlpTabla.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tlpTabla.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tlpTabla.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tlpTabla.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tlpTabla.Location = new Point(2, 0);
+            tlpTabla.Margin = new Padding(0);
             tlpTabla.Name = "tlpTabla";
             tlpTabla.RowCount = 4;
-            tlpTabla.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tlpTabla.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tlpTabla.RowStyles.Add(new RowStyle(SizeType.Absolute, 101F));
-            tlpTabla.RowStyles.Add(new RowStyle(SizeType.Absolute, 106F));
-            tlpTabla.Size = new Size(332, 391);
+            tlpTabla.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tlpTabla.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tlpTabla.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tlpTabla.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tlpTabla.Size = new Size(450, 672);
             tlpTabla.TabIndex = 0;
             // 
             // TablaControl
@@ -54,7 +55,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(tlpTabla);
             Name = "TablaControl";
-            Size = new Size(338, 397);
+            Size = new Size(455, 672);
             ResumeLayout(false);
         }
 

@@ -20,7 +20,7 @@ namespace LoteriaMexicanaModelos.CondicionesParaGanar
                 {
                     diagonal1Completa = false;
                 }
-                if (!tabla.ObtenerCasilla(i, 3-i).Marcada)
+                if (!tabla.ObtenerCasilla(i, 3 - i).Marcada)
                 {
                    diagonal2Completa = false;
                 }

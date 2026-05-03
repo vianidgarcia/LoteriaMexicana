@@ -13,6 +13,8 @@ namespace LoteriaMexicanaModelos
     public class Cliente
     {
         private string usuario;
+        public string Usuario => usuario;
+        private Jugador jugador;
         TcpClient cliente;
         NetworkStream stream;
         StreamWriter escritor;
@@ -84,6 +86,7 @@ namespace LoteriaMexicanaModelos
             });
         }
 
+
         public void EnviarMensaje(string contenido)
         {
             if (cliente == null || !cliente.Connected)
@@ -94,11 +97,35 @@ namespace LoteriaMexicanaModelos
             escritor.Flush();
         }
 
+        public void PrepararJugador(List<Carta> cartas)
+        {
+            jugador = new Jugador(this.usuario);
+            Tabla tabla = new Tabla(jugador.Nombre, "Mi Tabla");
+            tabla.GenerarAleatoria(cartas);
+            jugador.Tablas.Add(tabla);
+        }
+
+        public Tabla ObtenerTabla()
+        {
+            return jugador.Tablas[0];
+        }
+
+        public void EnviarTabla(Tabla tabla)
+        {
+            if (cliente == null || !cliente.Connected)
+                throw new InvalidOperationException("No estás conectado al servidor.");
+            MensajeGanador mensajeGanador = new MensajeGanador { Usuario = this.usuario, TipoGanador = "", CasillasMarcadas = tabla.ObtenerEstadoMarcado() };
+            string json = JsonSerializer.Serialize(mensajeGanador);
+            escritor.WriteLine(json);
+            escritor.Flush();
+        }
+
         public event Action<MensajeChat> OnMensajeRecibido;
         public event Action<string> OnJugadorConectado;
         public event Action<string> OnJugadorDesconectado;
         public event Action<MensajeCarta> OnCartaSacada;
         public event Action<MensajeGanador> OnGanador;
         public event Action<MensajeIniciarPartida> OnPartidaIniciada;
+        
     }
 }

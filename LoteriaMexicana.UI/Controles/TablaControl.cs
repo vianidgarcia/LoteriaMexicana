@@ -13,7 +13,7 @@ namespace LoteriaMexicana.UI.Controles
 {
     public partial class TablaControl : UserControl
     {
-        private Tabla _tabla;
+        private Tabla tabla;
         public TablaControl()
         {
             InitializeComponent();
@@ -21,22 +21,22 @@ namespace LoteriaMexicana.UI.Controles
 
         public void CargarTabla(Tabla tabla)
         {
-            _tabla = tabla;
+            this.tabla = tabla;
             tlpTabla.Controls.Clear();
             for (int i = 0; i < 4; i++)
             {
                 for (int j = 0; j < 4; j++)
                 {
-                    Casilla casilla = _tabla.ObtenerCasilla(i, j);
+                    Casilla casilla = this.tabla.ObtenerCasilla(i, j);
 
                     CartaControl cartaVisual = new CartaControl(casilla);
                     cartaVisual.Dock = DockStyle.Fill;
+
 
                     tlpTabla.Controls.Add(cartaVisual, j, i);
                 }
             }
         }
 
-        public Tabla ObtenerEstado() => _tabla;
     }
 }

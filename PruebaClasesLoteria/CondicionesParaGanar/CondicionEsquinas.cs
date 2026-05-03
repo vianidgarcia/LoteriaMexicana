@@ -12,9 +12,9 @@ namespace LoteriaMexicanaModelos.CondicionesParaGanar
         public bool Verificar(Tabla tabla)
         {
         return tabla.ObtenerCasilla(0, 0).Marcada &&
-        tabla.ObtenerCasilla(0, 3).Marcada &&
-        tabla.ObtenerCasilla(3, 0).Marcada &&
-        tabla.ObtenerCasilla(3, 3).Marcada;
+               tabla.ObtenerCasilla(0, 3).Marcada &&
+               tabla.ObtenerCasilla(3, 0).Marcada &&
+               tabla.ObtenerCasilla(3, 3).Marcada;
         }
     }
 }

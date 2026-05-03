@@ -10,6 +10,7 @@ namespace LoteriaMexicanaModelos.Mensajes
     {
         public string Usuario { get; set; }
         public string TipoGanador { get; set; }
+        public List<CartaEstado> CasillasMarcadas { get; set; }
         public MensajeGanador()
         {
             Tipo = "Ganador";

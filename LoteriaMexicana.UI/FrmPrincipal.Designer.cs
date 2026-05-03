@@ -31,18 +31,18 @@
             panelContenedor = new Panel();
             SuspendLayout();
             // 
-            // panelPrincipal
+            // panelContenedor
             // 
-            panelContenedor.Location = new Point(-1, 0);
-            panelContenedor.Name = "panelPrincipal";
-            panelContenedor.Size = new Size(802, 452);
+            panelContenedor.Location = new Point(-7, 1);
+            panelContenedor.Name = "panelContenedor";
+            panelContenedor.Size = new Size(908, 755);
             panelContenedor.TabIndex = 0;
             // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(893, 749);
             Controls.Add(panelContenedor);
             Name = "FrmPrincipal";
             Text = "Form1";
